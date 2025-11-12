@@ -1,31 +1,29 @@
 package unavarra.is.practica7.ejercicios;
 
 public class Ejercicio3 {
-
-    public static String horaMinutoSegundo(int h, int m, int s){
-        String resul = "";
-        if(h>0 && h<24){
-            if(m>0 && m<60){
-                if(s>0 && s<60){
-                    resul = "correcto";
-                }
-                else{
-                    resul = "segundos incorrectos";
-                }
-            }
-            else{
-                resul = "minutos incorrectos";
-            }
+	public enum EstadoValidacion {
+        CORRECTO,
+        HORA_INCORRECTA,
+        MINUTOS_INCORRECTOS,
+        SEGUNDOS_INCORRECTOS
+    }
+    
+    public static EstadoValidacion horaValidada(int hora, int minutos, int segundos){
+        if (hora <= 0 || hora >= 24) {
+            return EstadoValidacion.HORA_INCORRECTA;
         }
-        else{
-            resul = "hora incorrecta";
+        if (minutos <= 0 || minutos >= 60) {
+            return EstadoValidacion.MINUTOS_INCORRECTOS;
         }
-        return resul;
+        if (segundos <= 0 || segundos >= 60) {
+            return EstadoValidacion.SEGUNDOS_INCORRECTOS;
+        }
+        return EstadoValidacion.CORRECTO;
     }
 
     public static void main(String[] args) {
-        System.out.println(horaMinutoSegundo(9,34,23));
-        System.out.println(horaMinutoSegundo(25,34,23));
+        System.out.println(horaValidada(9,34,23));
+        System.out.println(horaValidada(25,34,23));
     }
     
 }

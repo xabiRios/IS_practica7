@@ -1,55 +1,22 @@
 package unavarra.is.practica7.ejercicios;
 
 public class Ejercicio4 {
+	
+    private static final String[] DIAS_SEMANA = {
+        "lunes", "martes", "miercoles", "jueves", "viernes", "sabado", "domingo"
+    };
     
-    public static String Dia(int d){
-        String resul = "";
-        if(d<=0){
-            resul = "dia incorrecto";
+    public static String obtenerNombreDia(int numeroDia) {
+		if (numeroDia < 1 || numeroDia > 7) {
+            return "dia incorrecto";
         }
-        else {
-            if(d==1){
-                resul = "lunes";
-            } 
-            else{
-                if(d==2){
-                    resul = "martes";
-                } 
-                else{
-                    if(d==3){
-                        resul = "miercoles";
-                    } 
-                    else{
-                        if(d==4){
-                            resul = "jueves";
-                        } 
-                        else{
-                            if(d==5){
-                                resul = "viernes";
-                            } 
-                            else{
-                                if(d==6){
-                                    resul = "sabado";
-                                } 
-                                else{
-                                    if(d==7){
-                                        resul = "domingo";
-                                    }
-                                    else{
-                                        resul = "dia incorrecto";
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-        return resul;
+        return DIAS_SEMANA[numeroDia - 1];
     }
+    
 
     public static void main(String[] args) {
-        System.out.println(Dia(3));
+        System.out.println(obtenerNombreDia(3));
+        System.out.println(obtenerNombreDia(9));
     }
     
 }
