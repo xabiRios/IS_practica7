@@ -3,22 +3,26 @@ package unavarra.is.practica7.ejercicios;
 import java.time.LocalDate;
 
 public class Ejercicio7 {
+	
+	private Ejercicio7() {
+	}
+	
     public static class Paciente {
 		
 		private String nombre;
         private float peso;
         private float altura;
-        private int añoNacimiento;
+        private int anioNacimiento;
         
         
         private static final float UMBRAL_SOBREPESO = 25.0f;
         private static final int EDAD_RIESGO = 65;
         
-        public Paciente(String nombre, float peso, float altura, int añoNacimiento) {
+        public Paciente(String nombre, float peso, float altura, int anioNacimiento) {
             this.nombre = nombre;
             this.peso = peso;
             this.altura = altura;
-            this.añoNacimiento = añoNacimiento;
+            this.anioNacimiento = anioNacimiento;
         }
         
         private float calcularIMC() {
@@ -26,7 +30,7 @@ public class Ejercicio7 {
         }
         
         private int calcularEdad() {
-            return LocalDate.now().getYear() - this.añoNacimiento;
+            return LocalDate.now().getYear() - this.anioNacimiento;
         }
         
         public boolean tieneRiesgoCardiovascular() {
@@ -63,8 +67,8 @@ public class Ejercicio7 {
             String nombre = t[0];
             float peso = Float.parseFloat(t[1]);
             float altura = Float.parseFloat(t[2]);
-            int año = Integer.parseInt(t[3]);
-            listaPacientes[i] = new Paciente(nombre, peso, altura, año);
+            int anio = Integer.parseInt(t[3]);
+            listaPacientes[i] = new Paciente(nombre, peso, altura, anio);
         }
         verificarRiesgo(listaPacientes);
     }

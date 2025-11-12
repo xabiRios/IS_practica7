@@ -2,6 +2,9 @@ package unavarra.is.practica7.ejercicios;
 
 public class Ejercicio5 {
     
+    private Ejercicio5() {
+	}
+	
     public static String obtenerDuracionMes(int numeroMes) {
 		if (numeroMes == 2) {
             return "Es un mes de 28 o 29 dias";

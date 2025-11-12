@@ -2,6 +2,9 @@ package unavarra.is.practica7.ejercicios;
 
 public class Ejercicio4 {
 	
+	private Ejercicio4() {
+	}
+
     private static final String[] DIAS_SEMANA = {
         "lunes", "martes", "miercoles", "jueves", "viernes", "sabado", "domingo"
     };

@@ -1,9 +1,10 @@
 package unavarra.is.practica7.ejercicios;
 
 public class Ejercicio2 {
-    
+    private Ejercicio2() {
+	}
     public static Boolean esPar(int n){
-        return (n % 2 == 0);
+        return n % 2 == 0;
     }
 
     public static void main(String[] args) {

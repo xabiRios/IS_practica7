@@ -1,6 +1,10 @@
 package unavarra.is.practica7.ejercicios;
 
 public class Ejercicio6 {
+	
+	private Ejercicio6() {
+	}
+	
     private static final String LETRAS_DNI = "TRWAGMYFPDXBNJZSQVHLCKE";
     
     public static char obtenerLetraDNI(int dni) {
