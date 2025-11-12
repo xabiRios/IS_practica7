@@ -2,7 +2,7 @@ package unavarra.is.practica7.ejercicios;
 
 import java.time.LocalDate;
 
-public class Ejercicio7 {
+public final class Ejercicio7 {
 	
 	private Ejercicio7() {
 	}

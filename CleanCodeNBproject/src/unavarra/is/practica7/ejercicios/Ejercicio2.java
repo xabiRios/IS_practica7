@@ -1,8 +1,9 @@
 package unavarra.is.practica7.ejercicios;
 
-public class Ejercicio2 {
+public final class Ejercicio2 {
     private Ejercicio2() {
 	}
+	
     public static Boolean esPar(int n){
         return n % 2 == 0;
     }

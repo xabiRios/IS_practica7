@@ -1,6 +1,6 @@
 package unavarra.is.practica7.ejercicios;
 
-public class Ejercicio6 {
+public final class Ejercicio6 {
 	
 	private Ejercicio6() {
 	}
